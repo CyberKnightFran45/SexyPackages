@@ -12,7 +12,7 @@ internal static partial class RsbDescriptorParser
 
 private static bool HasDescriptors(uint tableOffset, uint entrySize, uint count)
 {
-return tableOffset == 0 || entrySize == 0 || count == 0;
+return tableOffset != 0 && entrySize != 0 && count != 0;
 }
 
 // Read Pool Descriptors
