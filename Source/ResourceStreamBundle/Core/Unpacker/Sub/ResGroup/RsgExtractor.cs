@@ -89,7 +89,7 @@ fixed(byte* namePtr = desc.Name)
 {
 string name = UnsafeStringHelper.ExtractString(namePtr, 128);
 
-return string.IsNullOrEmpty(name) ? fallbackID : name;
+return string.IsNullOrWhiteSpace(name) ? fallbackID : name;
 }
 
 }
